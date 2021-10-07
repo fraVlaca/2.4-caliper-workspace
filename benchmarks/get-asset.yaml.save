@@ -8,7 +8,7 @@ test:
     retrieve assets of larger byteSize.
   workers:
     type: local
-    number: 10
+    number: 30
   rounds:
     - label: get-asset-evaluate-32000
       description: >-
@@ -21,7 +21,7 @@ test:
       rateControl:
         type: fixed-load
         opts:
-          transactionLoad: 1000000
+          transactionLoad: 10000
       workload:
         module: ../caliper-benchmarks/benchmarks/api/fabric/lib/get-asset.js
         arguments:

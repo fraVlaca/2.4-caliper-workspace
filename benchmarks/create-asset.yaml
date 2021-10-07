@@ -8,25 +8,224 @@ test:
     the byteSize of the asset added into the world state database.
   workers:
     type: local
-    number: 20
+    number: 10
   rounds:
+    - label: create-asset-100
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 100 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 1000
+          step: 40
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 100
+    - label: create-asset-1000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 1000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 800
+          step: 30
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 1000
+    - label: create-asset-4000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 4000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 600
+          step: 20
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 4000
+    - label: create-asset-8000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 8000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 500
+          step: 20
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 8000
+    - label: create-asset-16000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 16000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 400
+          step: 20
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 16000
     - label: create-asset-32000
       description: >-
         Test a submitTransaction() Gateway method against the NodeJS
         `fixed-asset` Smart Contract method named `createAsset`, which inserts
         an asset of size 32000 bytes into the World State database.
       chaincodeID: fixed-asset
-      txDuration: 30
+      txDuration: 100
       rateControl:
-        type: fixed-load
+        type: maximum-rate
         opts:
-          transactionLoad: 200
-          startingTps: 1
+          tps: 270
+          step: 20
+          sampleInterval: 0
       workload:
         module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
         arguments:
           chaincodeID: fixed-asset
           byteSize: 32000
+    - label: create-asset-64000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 64000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 180
+          step: 20
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 64000
+    - label: create-asset-128000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 128000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 120
+          step: 20
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 128000
+    - label: create-asset-256000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 256000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 80
+          step: 10
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 256000
+    - label: create-asset-512000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 512000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 40
+          step: 10
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 512000
+    - label: create-asset-1024000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 1024000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 20
+          step: 10
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 1024000
+    - label: create-asset-2056000
+      description: >-
+        Test a submitTransaction() Gateway method against the NodeJS
+        `fixed-asset` Smart Contract method named `createAsset`, which inserts
+        an asset of size 2056000 bytes into the World State database.
+      chaincodeID: fixed-asset
+      txDuration: 100
+      rateControl:
+        type: maximum-rate
+        opts:
+          tps: 10
+          step: 5
+          sampleInterval: 0
+      workload:
+        module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
+        arguments:
+          chaincodeID: fixed-asset
+          byteSize: 2056000
 monitors:
   resource:
   - module: docker
