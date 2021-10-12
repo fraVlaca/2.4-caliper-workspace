@@ -20,7 +20,7 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 1900
+          tps: 163840
           step: 40
           sampleInterval: 0
       workload:
@@ -38,7 +38,7 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 1300
+          tps: 20480
           step: 30
           sampleInterval: 0
       workload:
@@ -56,7 +56,7 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 900
+          tps: 5120
           step: 20
           sampleInterval: 0
       workload:
@@ -74,7 +74,7 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 700
+          tps: 2560
           step: 20
           sampleInterval: 0
       workload:
@@ -92,7 +92,7 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 500
+          tps: 1280
           step: 20
           sampleInterval: 0
       workload:
@@ -110,8 +110,8 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 300
-          step: 20
+          tps: 640
+          step: 10
           sampleInterval: 0
       workload:
         module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
@@ -128,8 +128,8 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 180
-          step: 20
+          tps: 320
+          step: 10
           sampleInterval: 0
       workload:
         module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js
@@ -146,8 +146,8 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 120
-          step: 20
+          tps: 160
+          step: 10
           sampleInterval: 0
       workload:
         module: ../caliper-benchmarks/benchmarks/api/fabric/lib/create-asset.js

@@ -20,7 +20,7 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 1900
+          tps: 1000
           step: 40
           sampleInterval: 0
       workload:
@@ -38,7 +38,7 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 1300
+          tps: 800
           step: 30
           sampleInterval: 0
       workload:
@@ -56,7 +56,7 @@ test:
       rateControl:
         type: maximum-rate
         opts:
-          tps: 900
+          tps: 600
           step: 20
           sampleInterval: 0
       workload:
@@ -70,7 +70,7 @@ test:
         `fixed-asset` Smart Contract method named `createAsset`, which inserts
         an asset of size 8000 bytes into the World State database.
       chaincodeID: fixed-asset
-      txDuration: 100
+      txDuration: 500
       rateControl:
         type: maximum-rate
         opts:
